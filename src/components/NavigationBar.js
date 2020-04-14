@@ -24,9 +24,13 @@ const Styles = styled.div`
 		margin-right: 3rem;
 	}
 
-	.navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show {
-    color: #AEC5A5;
-}
+	.mr-auto.navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show {
+    	color: #AEC5A5;
+	}
+
+	.ml-auto.navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show {
+    	color: #F0EDDA;
+	}
 `;
 
 export const NavigationBar = props => {

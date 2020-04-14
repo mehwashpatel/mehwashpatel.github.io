@@ -28,7 +28,7 @@ function App() {
           <HeaderWithRouter />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/blog" component={Blog} />
             <Route path="/contact" component={Contact} />

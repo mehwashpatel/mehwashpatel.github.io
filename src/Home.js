@@ -3,13 +3,11 @@ import {Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import mehwashImage from './assets/mehwash.png';
 import latestBlogImage from './assets/latest-blog.png';
+import reactLogoImage from './assets/react-logo.png';
+import bootstrapLogoImage from './assets/bootstrap-logo.png';
+import githubLogoImage from './assets/github-logo.png';
 
 const Styles = styled.div`
-	img {
-		height: 250px;
-
-	}
-
 	.stamp {
 		width: fit-content;
 	border: 2px dashed #fff;
@@ -28,6 +26,10 @@ const Styles = styled.div`
     text-align: center;
 }
 
+.center-align {
+	text-align: center;
+}
+
 p {
 	font-size: 1.5rem;
 }
@@ -38,6 +40,10 @@ h1 {
 
 section {
 	margin: 4rem;
+}
+
+.background-white {
+	background: white;
 }
 `;
 
@@ -107,10 +113,47 @@ export class Home extends React.Component{
 						<div className="col-md-5">
 							<h1>Latest Project</h1>
 							<div className="project">
-								<img src={latestBlogImage} alt="Latest Project" />
+								<img src={latestBlogImage} alt="Latest Project" height="250" />
 								<hr/>
 								<a href="/portfolio">View more projects</a>
 							</div>
+						</div>
+					</div>
+				</section>
+
+				<section className="center-align">
+					<h3> Tech stack used for this site </h3>
+					<div className="row center-align-div">
+						<div className="col-md-6 offset-md-3" >
+							<a href="https://reactjs.org/" target="blank" rel="noopener noreferrer">
+								<img src={reactLogoImage} alt="ReactJS" width="100"  />
+							</a>
+							&nbsp;
+							<a href="https://getbootstrap.com/" target="blank" rel="noopener noreferrer">
+								<img src={bootstrapLogoImage} alt="Bootstrap" width="100" />
+							</a>
+							&nbsp;
+							<a href="https://github.com/" target="blank" rel="noopener noreferrer">
+								<img src={githubLogoImage} alt="Bootstrap" width="100" />
+							</a>
+						</div>
+					</div>
+					<h3> Colour palette used for this site </h3>
+					<div className="row center-align-div background-white">
+						<div className="col-md-2 offset-md-1" style={{backgroundColor: '#F0EDDA'}}>
+							<label>#F0EDDA</label>
+						</div>
+						<div className="col-md-2" style={{backgroundColor: '#DC938B'}}>
+							<label>#DC938B</label>
+						</div>
+						<div className="col-md-2" style={{backgroundColor: '#AEC5A5'}}>
+							<label>#AEC5A5</label>
+						</div>
+						<div className="col-md-2" style={{backgroundColor: '#212529'}}>
+							<label style={{color: '#fff'}}>#212529</label>
+						</div>
+						<div className="col-md-2" style={{backgroundColor: '#fff'}}>
+							<label>#fff</label>
 						</div>
 					</div>
 				</section>
